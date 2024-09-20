@@ -35,17 +35,20 @@
 
 
     <!-- Person Info -->
-    <div class="container">
-        <div class="h2">تعديل الملف الشخصي</div class="h2">
+    <form>
 
 
-        <div class="profile-picture">
-            <img src="images/profile/Profile_Picture.png" alt="صورة المستخدم">
-            <button>تغيير الصورة الشخصية</button>
-        </div>
+        <div class="container">
+            <div class="h2">تعديل الملف الشخصي</div class="h2">
 
 
-        <form>
+                <div class="profile-picture">
+                    <img id="profileImage" src="images/profile/Profile_Picture.png" alt="صورة المستخدم">
+                    <button onclick="changeImage()">تغيير الصورة الشخصية</button>
+                    <input id="myphoto" type="file" style="display: none;" accept="image/*" onchange="previewImage(event)">
+                </div>
+
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="first-name">الاسم الأول</label>
@@ -56,7 +59,7 @@
                     <input type="text" id="last-name" placeholder="زيادنه">
                 </div>
             </div>
-            
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="website">الموقع</label>
@@ -67,14 +70,15 @@
                     <input type="email" id="email" placeholder="zayadnh13@gmail.com">
                 </div>
             </div>
-            
+
             <div class="form-group bio-group">
                 <label for="bio">نبذة شخصية</label>
-                <textarea class="bio" id="bio" rows="3" placeholder="مصوّر طبيعة ومعالم سياحية ومعالمات من جرش، الأردن."></textarea>
+                <textarea class="bio" id="bio" rows="3"
+                    placeholder="مصوّر طبيعة ومعالم سياحية ومعالمات من جرش، الأردن."></textarea>
             </div>
 
             <div class="mid-divider"></div>
-            
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="facebook">فيس بوك</label>
@@ -85,18 +89,18 @@
                     <input type="text" id="x" placeholder="x.com/hisham.zayadneh">
                 </div>
             </div>
-            
+
             <div class="form-row">
                 <div class="form-group">
                     <label for="instagram">إنستغرام</label>
                     <input type="text" id="instagram" placeholder="instagram.com/hisham.zayadneh">
                 </div>
             </div>
-            
+
             <button class="save-btn" type="submit">حفظ التغييرات</button>
-        </form>
+    </form>
     </div>
-    
+
 
 
 
@@ -126,3 +130,4 @@
 </body>
 
 </html>
+<script src="js/editprofile.js"></script>
