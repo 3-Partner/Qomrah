@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/Upload_Image.css">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload_Image</title>
+</head>
+
+<body>
+
+    <!-- Main Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <div class="logo-image">
+                <img src="images/logo.png" class="logo-icon">
+            </div>
+            <div class="logo-text">قُمرة</div>
+        </div>
+
+    </div>
+
+
+    <!-- Start Upload part-->
+
+    <form action="">
+
+        <div class="container">
+
+
+            <div class="alert" id="ErrorCase" onclick="disableErrorCase()">
+                <div> يجب أن لا يتعدى حجم الصورة 25MB </div>
+                <div onclick="" style="font-weight: bold;">✕</div>
+            </div>
+
+
+
+            <section class="cntered-sides">
+                <aside class="rightside">
+
+
+
+
+                    <div>
+                        <label for="imageLocation">
+                            موقع الصورة (إختياري)
+                        </label>
+                        <input type="text" name="imageLocation" placeholder="أدخل مكان الصورة">
+                    </div>
+
+                    <div>
+                        <label for="imageData">
+                            تاريخ التقاط الصورة (إختياري)
+                        </label>
+                        <input  type="text" style="cursor: pointer;" id="arabicDatePicker" name="imageData" placeholder="أدخل تاريخ التقاط الصورة">
+                    </div>
+
+                    <div>
+                        <label for="imagekey">
+                            الكلمات المفتاحية للصورة
+                        </label>
+                        <textarea type="text" class="imagekey" name="imagekey"
+                            placeholder="أدخل الكلمات المفتاحية للصورة"></textarea>
+                    </div>
+
+
+                    <div>
+                        <p>
+                            * لسهولة الوصول إلى صورتك يرجى إختيار أكبر عدد ممكن من الكلمات المفتاحية المناسبة للصورة مع
+                            استخدام فاصلة بعد كل كلمة.
+                        </p>
+                    </div>
+
+
+                    <div class="addimgebutton">
+                        <button>
+                            إضافة صورة
+                        </button>
+                    </div>
+
+
+
+
+
+
+                </aside>
+
+
+
+                    <aside class="leftside" id="userImage" ondrop="dropImage(event)" ondragover="allowDrop(event)">
+                        <div style="position: relative;">
+                            <img id="preview" src="./images/upload_icon_blue.png">
+                            <span id="removeImage" class="removeImage" onclick="removeImage()"> ✕ </span>
+                        </div>
+                        <input style="display: none;" id="myphoto" type="file" accept="image/*" onchange="previewImage(event)">
+                        <p> قم بإسقاط ما تريد تحميله هنا </p>
+                        <p> أو <span onclick="changeImage()" style="color: #1E86FF; cursor: pointer;">تصفح محتويات</span> جهازك لترفع الملف </p>
+                    </aside>
+
+
+            </section>
+
+        </div>
+
+    </form>
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="./js/Upload_Image.js"></script>
+
+
+
+</body>
+
+</html>
