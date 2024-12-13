@@ -335,3 +335,43 @@ button.save-btn {
 }
 
 
+
+
+
+
+
+
+/* Success update */
+#update-profile-box {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-edit-box {
+    display: flex;
+    width: 573px;
+    padding: 16px;
+    margin: 92px auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    border-radius: 4px;
+    background: #3B4351;
+}
+
+.success-edit-text {
+    color: #FFF;
+    text-align: right;
+    font-family: Almarai;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
